@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board de Tarefas DNC</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script src="./index.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Board de tarefas</h1>
+            <form action="" id = "taskInserter">
+                <input type="text"
+                    class = "inputArea"
+                    id = "taskName"
+                    name = "title"
+                    placeholder = "Nome da tarefa"
+                    aria-label = "Nome da tarefa">
+                
+                <input type="text"
+                    class = "inputArea"
+                    id = "taskLabel"
+                    name = "label"
+                    placeholder = "Etiqueta"
+                    aria-label = "Etiqueta">
+                
+                <button aria-label="Cadastrar tarefa" id="saveButton" type="submit" class="addTaskBtn">+</button>
+            </form>
+        </header>
+        <section>
+            <ul id="tasksList">
+                <!-- <li>
+                    <div class="taskContent">
+                      <div class="taskInfo">
+                        <h2>Implementar tela de listagem de tarefas</h2>
+                        <div class="tagDate">
+                            <p class="tag">frontend</p>
+                            <p class="date">Criado em: 21/08/2024</p>
+                        </div>
+                      </div>
+                      <button class="concludeBtn">Concluir</button>
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+
+        <footer>
+            <!-- texto do footer -->
+        </footer>
+    </main>
+    
+</body>
+</html>

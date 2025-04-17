@@ -1,0 +1,279 @@
+/* ESTILIZAÇÃO GERAL */
+
+html{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f9ff;
+    /* background-color: #8ca6cc; contraste maior*/
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+main {
+    width: 50vw;
+    /* height: 50vh; */
+    max-width: 80rem;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+h1{
+    font-size: 4rem;
+    color: #11175E; 
+    margin: 1rem 3rem;
+}
+
+/* ESTILIZAÇÃO FORMULÁRIO */
+form {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 3rem;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputArea {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: 3rem;
+    width: 5rem;
+}
+
+.addTaskBtn {
+    background-color: #2563EB;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    height: 5rem;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+ul{
+    list-style: none;
+    padding: 0 3rem;
+}
+
+li {
+    padding: 1.6rem;
+    border-radius: 12px;
+    border: solid 0.1rem #ccc;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.2rem;
+}
+
+li.completed h2,
+li.completed .tag,
+li.completed .date {
+    color: #94A3B8; /* cinza claro */
+    text-decoration: line-through;
+}
+
+li.completed .concludeBtn {
+    background-color: #22c55e;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+li.completed .concludeBtn::before {
+    content: "✓";
+}
+
+.taskContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.taskInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.taskInfo h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #001747;
+    margin: 0;
+}
+
+.tag {
+    background-color: #fff;
+    color: #B1BACB;
+    padding: 0.3rem 0.7rem;
+    border-radius: 80px;
+    border: 0.1rem solid;
+    font-size: 1.2rem;
+}
+
+.date {
+    font-size: 1.4rem;
+    color: #B1BACB;
+}
+
+.tagDate{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.concludeBtn {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    height: 4.4rem;
+    width: 12rem;
+    font-size: 1.8rem;
+    padding: auto;
+    
+    /* Para alinhar o texto do botão: */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+footer {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #334155;
+    text-align: right;
+}
+
+
+@media (max-width: 768px) {
+    main {
+      width: 90vw;
+      padding: 2rem 1rem;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+      margin: 1rem 0;
+    }
+  
+    form {
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      gap: 1rem;
+    }
+  
+    .inputArea {
+      width: 80vw;
+      font-size: 1.4rem;
+    }
+  
+    .addTaskBtn {
+      width: 85vw;
+      height: 4.4rem;
+      font-size: 1.6rem;
+    }
+  
+    ul {
+      width: 80vw;
+    }
+  
+    li {
+      padding: 1.4rem;
+    }
+  
+    .taskContent {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .taskInfo h2 {
+      font-size: 1.4rem;
+    }
+
+    .taskInfo{
+        width:100%;
+    }
+  
+    .tagDate {
+      flex-direction: column;
+      align-items: flex-start !important; /*não consegui poor nada alinhar a esquerda, este "!important" foi recomenado */
+      gap: 0.2rem;
+      align-self: left;
+    }
+    .tag{
+        margin-bottom: 0.1rem;
+    }
+    .date{
+        margin-top:0.1rem
+    }
+  
+    .concludeBtn {
+      width: 12rem;
+      font-size: 1.6rem;
+      height: 4rem;
+      align-self: center;
+    }
+  
+    li.completed .concludeBtn {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    footer {
+      text-align: right;
+      margin-top: 2rem;
+    }
+  }
